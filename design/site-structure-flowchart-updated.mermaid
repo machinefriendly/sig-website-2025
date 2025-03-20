@@ -1,0 +1,58 @@
+flowchart TD
+    Home["Home Page"] --> ProductCat["PRODUCT CATEGORY"]
+    Home --> Solutions["SOLUTIONS"]
+    Home --> Insight["INSIGHT (new)"]
+    Home --> Event["EVENT"]
+    Home --> Contact["CONTACT"]
+    
+    ProductCat --> ProductItem["PRODUCT ITEM PAGE"]
+    
+    Contact --> Terms["TERM & CONDITION"]
+    
+    subgraph Home Page Elements
+        H1["Navigation menu"]
+        H2["Our Files - Search entire collection"]
+        H3["Why we are + why us"]
+        H4["Sitemap"]
+    end
+    
+    subgraph Product Category
+        PC1["Filter products by category"]
+        PC2["Product grid with thumbnails"]
+    end
+    
+    subgraph Solutions Services
+        S1["Design & Prototyping Modules"]
+        S2["In-House Testing & Data Service"]
+        S3["Consulting Services"]
+        S4["Standards & Certification"]
+        S5["Recycling"]
+    end
+    
+    subgraph Insight
+        I1["Search functionality"]
+        I2["Grid of articles/posts"]
+        I3["Filtering options"]
+    end
+    
+    subgraph Event Section
+        E1["Registration for events"]
+        E2["Event calendar"]
+    end
+    
+    subgraph Contact Info
+        C1["Contact form"]
+        C2["Map/directions"]
+    end
+    
+    subgraph Product Item Details
+        PI1["Product specifications"]
+        PI2["Product images"]
+        PI3["Find easy to identify AEO products"]
+        PI4["Downloadable product info"]
+    end
+    
+    subgraph Terms Section
+        T1["AEO company information"]
+        T2["Terms and conditions"]
+    end

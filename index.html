@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIG Energy Technology - High-Performance Battery Solutions</title>
+    <meta name="description" content="SIG Energy Technology specializes in lithium-ion battery cells and modules, providing high-performance battery solutions for renewable energy and electric mobility.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="asset/SIG ENERGY TECHNOLOGY - logo static.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+        /* Solutions section styles */
+        .solution-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        @media (min-width: 768px) {
+            .solution-item {
+                flex-direction: row;
+                align-items: center;
+                gap: var(--spacing-lg);
+            }
+            
+            .solution-item:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+        }
+        
+        .solution-image {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        @media (min-width: 768px) {
+            .solution-image {
+                margin-bottom: 0;
+            }
+        }
+        
+        .solution-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .solution-content {
+            flex: 1;
+        }
+        
+        .solution-title {
+            margin-bottom: var(--spacing-sm);
+            font-size: 2rem;
+        }
+        
+        .solution-text {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .solution-features {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .solution-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .solution-feature i {
+            color: var(--primary-color);
+            margin-right: var(--spacing-xs);
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Container - Will be populated by JavaScript -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" style="margin-top: 0;">
+        <video src="https://www.datocms-assets.com/105899/1695210411-ep-1.mp4" preload="meta" muted="muted" loop="loop" playsinline="" autoplay class="absolute top-0 left-0 w-full h-full object-cover"></video>
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-title">SIG <br>Powering a Sustainable Future with High-Performance Batteries</h1>
+            </div>
+        </div>
+        
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="container">
+                <div class="stats fade-in">
+                    <div class="stat">
+                        <div class="stat-number">500,000+</div>
+                        <div class="stat-text">Lithium-ion Cells Supplied</div>
+                    </div>
+                    
+                    <div class="stat">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-text">Countries Served</div>
+                    </div>
+                    
+                    <div class="stat">
+                        <div class="stat-number">2015</div>
+                        <div class="stat-text">Founded in Paris</div>
+                    </div>
+                    
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-text">Commitment on Quality</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Why Choose Us Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Why Choose SIG</h2>
+            </div>
+            
+            
+            <div class="features fade-in">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="feature-title">Proven Expertise</h3>
+                    <p class="feature-text">Nearly a decade of experience in battery design and energy storage solutions</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="feature-title">Quality Control</h3>
+                    <p class="feature-text">Rigorous testing and validation in our in-house laboratory</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <h3 class="feature-title">Global Reach</h3>
+                    <p class="feature-text">Trusted by industry leaders in 30+ countries</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="feature-title">Eco-Design Solutions</h3>
+                    <p class="feature-text">Sustainable batteries optimized for recycling and long-term use</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Applications Section -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Product Applications</h2>
+            </div>
+            <div class="section-subtitle fade-in">
+                SIG Energy Technology provides tailored battery solutions for a wide range of industries and applications. Our expertise in both hardware and software enables us to deliver high-performance, reliable, and safe battery systems that meet the specific needs of our clients.
+            </div>
+            
+            <!-- Electric Mobility Solution -->
+            <div class="solution-item fade-in">
+                <div class="solution-image">
+                    <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Electric Mobility">
+                    <div class="image-overlay">
+                        <h4>Recommended Batteries:</h4>
+                        <ul>
+                            <li><a href="pages/products/L135F72.html">L135F72 (CAM72)</a> - High capacity for EVs</li>
+                            <li><a href="pages/products/L173F230.html">L173F230</a> - Fast charging for commercial fleets</li>
+                            <li><a href="pages/products/LF105.html">LF105</a> - Compact design for urban mobility</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="solution-content">
+                    <h2 class="solution-title">Electric Mobility</h2>
+                    <p class="solution-text">Our battery solutions power a wide range of electric vehicles, from passenger cars to commercial fleets. We work closely with OEMs, fleet operators, and retrofit companies to deliver high-performance battery systems that meet the demanding requirements of electric mobility applications.</p>
+                    
+                    <div class="solution-features">
+                        <div class="solution-feature">
+                            <i class="fas fa-check"></i>
+                            <div>High energy density for extended range</div>
+                        </div>
+                        <div class="solution-feature">
+                            <i class="fas fa-check"></i>
+                            <div>Fast charging capabilities</div>
+                        </div>
+                        <div class="solution-feature">
+                            <i class="fas fa-check"></i>
+                            <div>Robust design for automotive environments</div>
+                        </div>
+                        <div class="solution-feature">
+                            <i class="fas fa-check"></i>
+                            <div>Advanced BMS for optimal performance and safety</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- Renewable Energy Storage Solution -->
+            <div class="solution-item fade-in">
+                <div class="solution-image">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Renewable Energy Storage">
+                    <div class="image-overlay">
+                        <h4>Recommended Batteries:</h4>
+                        <ul>
+                            <li><a href="pages/products/L173F163.html">L173F163</a> - High capacity for solar systems</li>
+                            <li><a href="pages/products/L173F230.html">L173F230</a> - Ideal for grid storage</li>
+                            <li><a href="pages/products/L135F72.html">L135F72 (CAM72)</a> - Residential energy storage</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="solution-content">
+                    <h2 class="solution-title">Renewable Energy Storage</h2>
+                    <p class="solution-text">Our energy storage solutions help balance supply and demand for renewable energy sources like solar and wind. We provide battery systems for grid stabilization, peak shaving, and backup power applications, enabling more efficient and reliable renewable energy integration.</p>
+                    
+                    <div class="solution-features">
+                        <div class="solution-feature">
+                            <i class="fas fa-check"></i>
+                            <div>Scalable battery systems for various capacities</div>
+                        </div>
+                        <div class="solution-feature">
+                            <i class="fas fa-check"></i>
+                            <div>Long cycle life for sustainable operation</div>
+                        </div>
+                        <div class="solution-feature">
+                            <i class="fas fa-check"></i>
+                            <div>Grid-compliant power electronics</div>
+                        </div>
+                        <div class="solution-feature">
+                            <i class="fas fa-check"></i>
+                            <div>Remote monitoring and management capabilities</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- Industrial Applications Solution -->
+            <div class="solution-item fade-in">
+                <div class="solution-image">
+                    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Industrial Applications">
+                    <div class="image-overlay">
+                        <h4>Recommended Batteries:</h4>
+                        <ul>
+                            <li><a href="pages/products/LF105.html">LF105</a> - Compact for portable equipment</li>
+                            <li><a href="pages/products/L173F163.html">L173F163</a> - Heavy-duty industrial use</li>
+                            <li><a href="pages/products/L135F72.html">L135F72 (CAM72)</a> - Long-life for machinery</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="solution-content">
+                    <h2 class="solution-title">Industrial Applications</h2>
+                    <p class="solution-text">We provide robust battery solutions for industrial equipment and machinery, including material handling equipment, construction machinery, and automated guided vehicles. Our industrial battery systems are designed to withstand harsh conditions while delivering reliable performance.</p>
+                    
+                    <div class="solution-features">
+                        <div class="solution-feature">
+                            <i class="fas fa-check"></i>
+                            <div>High power output for demanding applications</div>
+                        </div>
+                        <div class="solution-feature">
+                            <i class="fas fa-check"></i>
+                            <div>Rugged design for industrial environments</div>
+                        </div>
+                        <div class="solution-feature">
+                            <i class="fas fa-check"></i>
+                            <div>Fast charging for minimal downtime</div>
+                        </div>
+                        <div class="solution-feature">
+                            <i class="fas fa-check"></i>
+                            <div>Customizable form factors for various equipment</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- Marine Applications Solution -->
+            <div class="solution-item fade-in">
+                <div class="solution-image">
+                    <img src="https://images.unsplash.com/photo-1605281317010-fe5ffe798166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Marine Applications">
+                    <div class="image-overlay">
+                        <h4>Recommended Batteries:</h4>
+                        <ul>
+                            <li><a href="pages/products/L173F230.html">L173F230</a> - High capacity for marine propulsion</li>
+                            <li><a href="pages/products/L173F163.html">L173F163</a> - Ideal for onboard systems</li>
+                            <li><a href="pages/products/L135F72.html">L135F72 (CAM72)</a> - Compact for small vessels</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="solution-content">
+                    <h2 class="solution-title">Marine Applications</h2>
+                    <p class="solution-text">Our marine battery solutions power electric and hybrid boats, yachts, and other marine vessels. Designed to meet the unique challenges of marine environments, our battery systems provide reliable power while reducing emissions and noise pollution on the water.</p>
+                    
+                    <div class="solution-features">
+                        <div class="solution-feature">
+                            <i class="fas fa-check"></i>
+                            <div>Waterproof and corrosion-resistant design</div>
+                        </div>
+                        <div class="solution-feature">
+                            <i class="fas fa-check"></i>
+                            <div>Compliance with marine safety standards</div>
+                        </div>
+                        <div class="solution-feature">
+                            <i class="fas fa-check"></i>
+                            <div>High energy density for extended range</div>
+                        </div>
+                        <div class="solution-feature">
+                            <i class="fas fa-check"></i>
+                            <div>Integrated thermal management for marine conditions</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container">
+            <div class="cta fade-in" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2>Ready to Power Your Project?</h2>
+                
+                <div class="cta-buttons">
+                    <a href="pages/products/index.html" class="btn btn-outline">Find Qualified Battery</a>
+                    <a href="pages/solutions/index.html" class="btn btn-outline">BUILD WITH SIG</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Container - Will be populated by JavaScript -->
+    <div id="footer-container"></div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

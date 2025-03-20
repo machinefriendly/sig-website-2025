@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulting Services - SIG Energy Technology</title>
+    <meta name="description" content="SIG Energy Technology's expert consulting services for battery technology, local fabrication, energy law, and custom module design.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../asset/SIG ENERGY TECHNOLOGY - logo static.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    
+    <!-- Flatpickr for Calendar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    
+    <style>
+        /* Page-specific styles */
+        .consulting-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 8rem 0 4rem;
+            margin-top: 80px;
+        }
+        
+        .intro-section {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .intro-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .intro-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: var(--dark-gray);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--light-gray);
+            color: var(--primary-color);
+            font-size: 3rem;
+        }
+        
+        .service-content {
+            padding: 2rem;
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .service-description {
+            color: var(--dark-gray);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .booking-section {
+            background-color: var(--light-gray);
+            padding: 4rem 0;
+        }
+        
+        .booking-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        
+        @media (max-width: 992px) {
+            .booking-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .booking-info h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .booking-info p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            color: var(--dark-gray);
+        }
+        
+        .booking-features {
+            margin: 2rem 0;
+        }
+        
+        .booking-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .booking-feature i {
+            color: var(--primary-color);
+            margin-right: 1rem;
+            margin-top: 0.25rem;
+            flex-shrink: 0;
+        }
+        
+        .booking-feature-text {
+            color: var(--dark-gray);
+        }
+        
+        .calendar-container {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .calendar-header {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .calendar-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .calendar-header p {
+            color: var(--dark-gray);
+        }
+        
+        .booking-form {
+            margin-top: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
+        }
+        
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .time-slot {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .time-slot:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .time-slot.selected {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+        
+        .time-slot.unavailable {
+            background-color: #f5f5f5;
+            color: #aaa;
+            cursor: not-allowed;
+            text-decoration: line-through;
+        }
+        
+        .experts-section {
+            padding: 4rem 0;
+        }
+        
+        .experts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .expert-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform var(--transition-medium);
+        }
+        
+        .expert-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .expert-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .expert-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .expert-content {
+            padding: 1.5rem;
+        }
+        
+        .expert-name {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .expert-title {
+            font-size: 0.875rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .expert-bio {
+            color: var(--dark-gray);
+            font-size: 0.875rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .expert-specialties {
+            margin-top: 1rem;
+        }
+        
+        .expert-specialty {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background-color: var(--light-gray);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-gray);
+        }
+        
+        .testimonials-section {
+            background-color: var(--light-gray);
+            padding: 4rem 0;
+        }
+        
+        .testimonial {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+        
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-info h4 {
+            margin-bottom: 0.25rem;
+            color: var(--dark);
+        }
+        
+        .testimonial-info p {
+            font-size: 0.875rem;
+            color: var(--dark-gray);
+        }
+        
+        .cta-section {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .cta-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Container - Will be populated by JavaScript -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="consulting-hero">
+        <div class="container">
+            <h1>Expert Consulting Services</h1>
+            <p>Specialized guidance for your energy storage challenges</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-content fade-in">
+                <h2>Battery expertise at your service</h2>
+                <p>
+                    SIG Energy Technology brings you tailored consulting solutions to navigate the complex world 
+                    of energy storage. Our specialists provide expert guidance on local manufacturing, regulatory compliance, 
+                    custom design, and industry research to optimize your energy storage implementations.
+                </p>
+                <a href="#booking" class="btn">Book a Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section section-gray">
+        <div class="container">
+            
+            <div class="services-grid fade-in">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Local Fabrication Implementation</h3>
+                        <p class="service-description">
+                            We guide you through the process of setting up local battery manufacturing facilities. Our experts provide insights on equipment selection, 
+                            facility design, quality control processes, and workforce training to ensure successful implementation of your production capabilities.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Local Energy Industry Law</h3>
+                        <p class="service-description">
+                            Navigate the complex regulatory landscape of the energy storage industry with our specialized legal expertise. 
+                            We provide guidance on compliance with local regulations, certification requirements, import/export considerations, 
+                            and help you develop strategies to adapt to evolving regulatory frameworks.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Custom Module Design Support</h3>
+                        <p class="service-description">
+                            Our engineering team provides expert guidance on custom battery module design for your specific applications. 
+                            We offer insights on cell selection, thermal management, BMS integration, mechanical design, and safety considerations 
+                            to help you develop high-performance, reliable battery systems.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Energy Domain Deep Research</h3>
+                        <p class="service-description">
+                            Leverage our extensive research capabilities and in-house data to gain deep insights into energy storage technologies, 
+                            market trends, and performance benchmarks. Our research team conducts custom analyses to help you make informed decisions 
+                            and develop innovative solutions for your energy storage challenges.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="booking-container fade-in">
+                <div class="booking-info">
+                    <h2>Book a Consultation</h2>
+                    <p>
+                        Schedule a one-on-one consultation with our battery technology experts to discuss your specific challenges and requirements.
+                        Our consultants will provide personalized guidance and actionable insights to help you achieve your goals.
+                    </p>
+                    
+                    <div class="booking-features">
+                        <div class="booking-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="booking-feature-text">
+                                <strong>Personalized Guidance:</strong> One-on-one sessions tailored to your specific needs
+                            </div>
+                        </div>
+                        <div class="booking-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="booking-feature-text">
+                                <strong>Expert Consultants:</strong> Access to specialists with deep industry knowledge
+                            </div>
+                        </div>
+                        <div class="booking-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="booking-feature-text">
+                                <strong>Flexible Scheduling:</strong> Choose a time that works for your team
+                            </div>
+                        </div>
+                        <div class="booking-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="booking-feature-text">
+                                <strong>Actionable Insights:</strong> Practical recommendations you can implement immediately
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p>
+                        <strong>Consultation Fee:</strong> €100 per hour<br>
+                        <strong>Duration:</strong> 60 minutes<br>
+                        <strong>Format:</strong> Virtual (Zoom) or in-person at our Paris office
+                    </p>
+                </div>
+                
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <h3>Select a Date & Time</h3>
+                        <p>Available time slots are shown in the calendar below</p>
+                    </div>
+                    
+                    <div id="booking-calendar"></div>
+                    
+                    <form class="booking-form">
+                        <div class="form-group">
+                            <label class="form-label" for="booking-date">Selected Date</label>
+                            <input type="text" id="booking-date" class="form-control" placeholder="Select a date" readonly>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Available Time Slots</label>
+                            <div class="time-slots">
+                                <div class="time-slot">9:00 AM</div>
+                                <div class="time-slot">10:00 AM</div>
+                                <div class="time-slot unavailable">11:00 AM</div>
+                                <div class="time-slot">12:00 PM</div>
+                                <div class="time-slot">2:00 PM</div>
+                                <div class="time-slot unavailable">3:00 PM</div>
+                                <div class="time-slot">4:00 PM</div>
+                                <div class="time-slot">5:00 PM</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="consultation-type">Consultation Type</label>
+                            <select id="consultation-type" class="form-control">
+                                <option value="fabrication">Local Fabrication Implementation</option>
+                                <option value="legal">Local Energy Industry Law</option>
+                                <option value="design">Custom Module Design Support</option>
+                                <option value="research">Energy Domain Deep Research</option>
+                                <option value="general">General Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="consultation-notes">Brief Description of Your Needs</label>
+                            <textarea id="consultation-notes" class="form-control" rows="4" placeholder="Please provide a brief description of what you'd like to discuss during the consultation"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-block">Book Consultation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+ 
+    <!-- Footer Container - Will be populated by JavaScript -->
+    <div id="footer-container"></div>
+
+    <!-- JavaScript -->
+    <script src="../../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Flatpickr calendar
+            const bookingCalendar = flatpickr("#booking-calendar", {
+                inline: true,
+                minDate: "today",
+                maxDate: new Date().fp_incr(60), // 60 days from now
+                disable: [
+                    function(date) {
+                        // Disable weekends
+                        return (date.getDay() === 0 || date.getDay() === 6);
+                    }
+                ],
+                onChange: function(selectedDates, dateStr) {
+                    document.getElementById('booking-date').value = dateStr;
+                    
+                    // Reset time slots
+                    const timeSlots = document.querySelectorAll('.time-slot:not(.unavailable)');
+                    timeSlots.forEach(slot => {
+                        slot.classList.remove('selected');
+                    });
+                }
+            });
+            
+            // Time slot selection
+            const timeSlots = document.querySelectorAll('.time-slot:not(.unavailable)');
+            timeSlots.forEach(slot => {
+                slot.addEventListener('click', function() {
+                    // Remove selected class from all slots
+                    timeSlots.forEach(s => s.classList.remove('selected'));
+                    
+                    // Add selected class to clicked slot
+                    this.classList.add('selected');
+                });
+            });
+            
+            // Form submission
+            const bookingForm = document.querySelector('.booking-form');
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const date = document.getElementById('booking-date').value;
+                    const selectedTimeSlot = document.querySelector('.time-slot.selected');
+                    const consultationType = document.getElementById('consultation-type').value;
+                    const notes = document.getElementById('consultation-notes').value;
+                    
+                    if (!date) {
+                        alert('Please select a date');
+                        return;
+                    }
+                    
+                    if (!selectedTimeSlot) {
+                        alert('Please select a time slot');
+                        return;
+                    }
+                    
+                    // In a real application, this would send the booking data to a server
+                    // For this demo, we'll just show a success message
+                    alert(`Consultation booked for ${date} at ${selectedTimeSlot.textContent}. We'll contact you shortly to confirm.`);
+                    
+                    // Reset form
+                    this.reset();
+                    document.querySelectorAll('.time-slot').forEach(slot => {
+                        slot.classList.remove('selected');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

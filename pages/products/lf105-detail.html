@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LFP 105Ah Prismatic Cell - SIG Energy Technology</title>
+    <meta name="description" content="Detailed specifications and information about SIG Energy Technology's LFP 105Ah Prismatic Cell for energy storage and electric mobility applications.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../asset/SIG ENERGY TECHNOLOGY - logo static.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    
+    <style>
+        /* Page-specific styles */
+        .product-detail-section {
+            padding: 2rem 0;
+        }
+        
+        .product-breadcrumb {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        .product-breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .product-breadcrumb span {
+            margin: 0 0.5rem;
+            color: var(--dark-gray);
+        }
+        
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .product-detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Product Gallery */
+        .product-gallery {
+            position: relative;
+        }
+        
+        .gallery-main {
+            border: 1px solid #e0e0e0;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-bottom: 1rem;
+            background-color: var(--white);
+        }
+        
+        .gallery-main img {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+            display: none;
+        }
+        
+        .gallery-main img.active {
+            display: block;
+        }
+        
+        .gallery-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .gallery-nav-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color var(--transition-fast);
+        }
+        
+        .gallery-nav-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .gallery-thumbnails {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .gallery-thumbnail {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #e0e0e0;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity var(--transition-fast);
+        }
+        
+        .gallery-thumbnail.active {
+            border-color: var(--primary-color);
+            opacity: 1;
+        }
+        
+        .gallery-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        /* Product Info */
+        .product-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .product-sku {
+            display: inline-block;
+            background-color: var(--light-gray);
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--border-radius);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-description {
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        /* Specifications Table */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .specs-table th {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: left;
+            padding: 1rem;
+            font-weight: 500;
+        }
+        
+        .specs-table tr:nth-child(even) {
+            background-color: var(--light-gray);
+        }
+        
+        .specs-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .specs-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .specs-section-title {
+            background-color: var(--primary-light) !important;
+            color: var(--dark);
+            font-weight: 500;
+        }
+        
+        .specs-section-title td {
+            padding: 0.75rem 1rem;
+        }
+        
+        /* Datasheet Request Form */
+        .datasheet-form {
+            background-color: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-top: 2rem;
+        }
+        
+        .datasheet-form h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e0e0e0;
+            border-radius: var(--border-radius);
+            font-family: inherit;
+            font-size: inherit;
+        }
+        
+        .form-check {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .form-check input {
+            margin-top: 0.25rem;
+            margin-right: 0.5rem;
+        }
+        
+        .form-text {
+            font-size: 0.85rem;
+            color: var(--dark-gray);
+            margin-top: 0.25rem;
+        }
+        
+        /* Category Navigation */
+        .category-nav {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+        
+        .category-nav h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        
+        .category-nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .category-nav-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            color: var(--dark);
+            transition: all var(--transition-fast);
+        }
+        
+        .category-nav-link:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .category-nav-link.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Container - Will be populated by JavaScript -->
+    <div id="header-container"></div>
+
+    <br>
+
+    <!-- Product Detail Section -->
+    <section class="section product-detail-section" style="margin-top: 50px;">
+        <div class="container">
+            
+            
+            <div class="product-detail-grid">
+                <!-- Product Gallery -->
+                <div class="product-gallery fade-in">
+                    <div class="gallery-main">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5d638ee89a16e40001315e0e/1567072969657-NK59ESXSDCW5UZDLSYTR/CELLULE-SIG-SOLUTION-CELLULELF105_sig-innotech.com?format=750w" alt="LFP 105Ah Prismatic Cell - Front View" class="active" id="gallery-img-1">
+                        <img src="../../asset/images/sketches/product_sketch.jpeg" alt="LFP 105Ah Prismatic Cell - Side View" id="gallery-img-2">
+                    </div>
+                    
+                    <div class="gallery-nav">
+                        <button class="gallery-nav-btn" id="gallery-prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-nav-btn" id="gallery-next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="gallery-thumbnails">
+                        <div class="gallery-thumbnail active" data-index="1">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d638ee89a16e40001315e0e/1567072969657-NK59ESXSDCW5UZDLSYTR/CELLULE-SIG-SOLUTION-CELLULELF105_sig-innotech.com?format=300w" alt="LFP 105Ah Prismatic Cell - Thumbnail 1">
+                        </div>
+                        <div class="gallery-thumbnail" data-index="2">
+                            <img src="../../asset/images/sketches/product_sketch.jpeg" alt="LFP 105Ah Prismatic Cell - Thumbnail 2">
+                        </div>
+                    </div>
+                    
+                    <!-- ChatGPT Style Chat Box -->
+                    <div class="chat-box" style="margin-top: 30px;">
+                        <div style="background-color: transparent; border: 1px solid grey; border-radius: 30px; padding: 15px 25px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                            <!-- Text Input Area -->
+                            <div style="flex-grow: 1;">
+                                <input type="text" placeholder="Ask anything about LF105" style="background: transparent; border: none; color: #9a9a9a; font-size: 1.2rem; width: 100%; outline: none; padding: 10px 0;">
+                            </div>
+                            
+                            <!-- Action Buttons -->
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <!-- Send Button -->
+                                <button style="background-color: #3a3a3a; border: none; color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background-color 0.2s;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: white;"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="chat-response" class="chat-response"></div>
+                    </div>
+                </div>
+                
+                <!-- Product Info -->
+                <div class="product-info fade-in">
+                    <h1 class="product-title">LFP 105Ah Prismatic Cell</h1>
+                    <div class="product-sku">SKU: LF105</div>
+                    
+                    <p class="product-description">
+                        The LFP 105Ah Prismatic Cell is a high-performance lithium iron phosphate (LFP) battery cell designed for energy storage applications. With its excellent safety profile, long cycle life, and high energy density, this cell is ideal for residential and commercial energy storage systems, as well as electric mobility applications.
+                    </p>
+                    
+                    <h2>Specifications</h2>
+                    
+                    <table class="specs-table">
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>Reference</td>
+                            <td>LF105</td>
+                        </tr>
+                        <tr>
+                            <td>Family</td>
+                            <td>Prismatic</td>
+                        </tr>
+                        <tr>
+                            <td>Type</td>
+                            <td>LiFePO4 (LFP)</td>
+                        </tr>
+                        <tr>
+                            <td>Nominal capacity (Ah)</td>
+                            <td>105 Ah</td>
+                        </tr>
+                        <tr>
+                            <td>Nominal voltage</td>
+                            <td>3.2 V</td>
+                        </tr>
+                        <tr>
+                            <td>Internal resistance (1 kHz, AC)</td>
+                            <td>≤ 0.6 mΩ</td>
+                        </tr>
+                        <tr>
+                            <td>Life cycle (charging C/3 C, discharging C/3, 80% DOD, 25°C/77°F of rated capacity)</td>
+                            <td>≥2000</td>
+                        </tr>
+                        <tr>
+                            <td>Energy Density</td>
+                            <td>96 Wh/kg</td>
+                        </tr>
+                        <tr>
+                            <td>Certifications</td>
+                            <td>CE, UL, IEC</td>
+                        </tr>
+                        <tr>
+                            <td>Shipping Classification</td>
+                            <td>UN3480</td>
+                        </tr>
+                        <tr>
+                            <td>Weight</td>
+                            <td>2.1 kg ± 0.1 kg</td>
+                        </tr>
+                        <tr class="specs-section-title">
+                            <td colspan="2">OPERATING CONDITIONS</td>
+                        </tr>
+                        <tr>
+                            <td>Maximum constant charging current</td>
+                            <td>105 A</td>
+                        </tr>
+                        <tr>
+                            <td>Maximum constant discharging current</td>
+                            <td>105 A</td>
+                        </tr>
+                        <tr>
+                            <td>Charging cut-off voltage</td>
+                            <td>3.65 V</td>
+                        </tr>
+                        <tr>
+                            <td>Discharging cut-off voltage</td>
+                            <td>2.5 V</td>
+                        </tr>
+                        <tr>
+                            <td>Recommended SoC range window</td>
+                            <td>10 % - 90 %</td>
+                        </tr>
+                        <tr>
+                            <td>Charging ambient temperature</td>
+                            <td>0°C - 45°C</td>
+                        </tr>
+                        <tr>
+                            <td>Discharging temperature</td>
+                            <td>-20°C - 55°C</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="../../asset/SIG ENERGY TECHNOLOGY - logo static.png" alt="SIG Energy Technology Logo">
+                    </div>
+                    <p>SIG Energy Technology specializes in lithium-ion battery cells and modules, providing high-performance battery solutions for renewable energy and electric mobility.</p>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../../index.html">Home</a></li>
+                        <li class="footer-link"><a href="battery-cells.html">Products</a></li>
+                        <li class="footer-link"><a href="../solutions/index.html">Solutions</a></li>
+                        <li class="footer-link"><a href="../insight/index.html">Insight</a></li>
+                        <li class="footer-link"><a href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h4 class="footer-title">Solutions</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../solutions/electric-mobility.html">Electric Mobility</a></li>
+                        <li class="footer-link"><a href="../solutions/renewable-energy-storage.html">Renewable Energy Storage</a></li>
+                        <li class="footer-link"><a href="../solutions/industrial-applications.html">Industrial Applications</a></li>
+                        <li class="footer-link"><a href="../solutions/marine-applications.html">Marine Applications</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div>Paris, France</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div>info@sig-innotech.com</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <div>+33 (0)1 XX XX XX XX</div>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 SIG Energy Technology. All rights reserved. <a href="../contact/terms.html">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery functionality
+            const galleryImages = document.querySelectorAll('.gallery-main img');
+            const galleryThumbnails = document.querySelectorAll('.gallery-thumbnail');
+            const prevBtn = document.getElementById('gallery-prev');
+            const nextBtn = document.getElementById('gallery-next');
+            let currentIndex = 0;
+            
+            // Function to show image at index
+            function showImage(index) {
+                // Hide all images
+                galleryImages.forEach(img => img.classList.remove('active'));
+                galleryThumbnails.forEach(thumb => thumb.classList.remove('active'));
+                
+                // Show image at index
+                galleryImages[index].classList.add('active');
+                galleryThumbnails[index].classList.add('active');
+                currentIndex = index;
+            }
+            
+            // Previous button click
+            prevBtn.addEventListener('click', function() {
+                let newIndex = currentIndex - 1;
+                if (newIndex < 0) {
+                    newIndex = galleryImages.length - 1;
+                }
+                showImage(newIndex);
+            });
+            
+            // Next button click
+            nextBtn.addEventListener('click', function() {
+                let newIndex = currentIndex + 1;
+                if (newIndex >= galleryImages.length) {
+                    newIndex = 0;
+                }
+                showImage(newIndex);
+            });
+            
+            // Thumbnail click
+            galleryThumbnails.forEach(thumb => {
+                thumb.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index')) - 1;
+                    showImage(index);
+                });
+            });
+            
+            // Datasheet request form
+            const datasheetForm = document.getElementById('datasheet-request-form');
+            if (datasheetForm) {
+                datasheetForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real implementation, this would send the form data to a server
+                    // For this demo, we'll just show a success message
+                    alert('Thank you for your request. The data sheet will be sent to your email shortly.');
+                    
+                    // Reset form
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

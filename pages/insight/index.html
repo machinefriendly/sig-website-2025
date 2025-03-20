@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight - SIG Energy Technology</title>
+    <meta name="description" content="Explore SIG Energy Technology's insights, articles, and resources on battery technology, energy storage, and sustainable solutions.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../asset/SIG ENERGY TECHNOLOGY - logo static.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    
+    <style>
+        /* Page-specific styles */
+        .search-container {
+            position: relative;
+            max-width: 600px;
+            margin: 50px auto var(--spacing-lg);
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 1px solid var(--medium-gray);
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: all var(--transition-fast);
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(154, 193, 84, 0.2);
+        }
+        
+        .search-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+        
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            display: none;
+            padding: var(--spacing-sm);
+            margin-top: var(--spacing-xs);
+        }
+        
+        .search-result-item {
+            padding: var(--spacing-sm);
+            border-bottom: 1px solid var(--medium-gray);
+        }
+        
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+        
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-md);
+            gap: var(--spacing-xs);
+        }
+        
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            background-color: var(--light-gray);
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .insight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--spacing-md);
+        }
+        
+        .insight-item {
+            transition: all var(--transition-medium);
+        }
+        
+        .insight-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .insight-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .insight-meta {
+            display: flex;
+            color: var(--dark-gray);
+            font-size: 0.875rem;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .insight-category {
+            margin-right: var(--spacing-sm);
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .insight-date {
+            margin-right: var(--spacing-sm);
+        }
+        
+        .insight-text {
+            flex: 1;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .featured-insight {
+            grid-column: 1 / -1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        @media (min-width: 768px) {
+            .featured-insight {
+                flex-direction: row;
+                gap: var(--spacing-lg);
+            }
+        }
+        
+        .featured-insight .insight-image {
+            flex: 1;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        @media (min-width: 768px) {
+            .featured-insight .insight-image {
+                margin-bottom: 0;
+            }
+        }
+        
+        .featured-insight .insight-content {
+            flex: 1;
+        }
+        
+        .featured-insight .card-title {
+            font-size: 1.75rem;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--spacing-lg);
+        }
+        
+        .pagination-item {
+            margin: 0 var(--spacing-xs);
+        }
+        
+        .pagination-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--light-gray);
+            color: var(--text-color);
+            transition: all var(--transition-fast);
+        }
+        
+        .pagination-link:hover,
+        .pagination-link.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Container - Will be populated by JavaScript -->
+    <div id="header-container"></div>
+
+  
+
+    <!-- Search Section -->
+    <section class="section">
+        <div class="container">
+            <div class="search-container fade-in">
+                <input type="text" class="search-input" placeholder="Search articles, topics, and resources...">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="search-results">
+                    <!-- Search results will appear here -->
+                </div>
+            </div>
+            
+            <div class="filter-container fade-in">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="technology">Technology</button>
+                <button class="filter-btn" data-filter="industry">Industry</button>
+                <button class="filter-btn" data-filter="sustainability">Sustainability</button>
+                <button class="filter-btn" data-filter="case-studies">Case Studies</button>
+                <button class="filter-btn" data-filter="news">News</button>
+            </div>
+            
+            <div class="insight-grid fade-in">
+                <!-- Featured Article -->
+                <div class="card featured-insight insight-item all technology">
+                    <div class="insight-image">
+                        <img src="https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="The Future of Battery Technology" class="card-img">
+                    </div>
+                    <div class="insight-content card-content">
+                        <div class="insight-meta">
+                            <div class="insight-category">Technology</div>
+                            <div class="insight-date">March 15, 2025</div>
+                        </div>
+                        <h3 class="card-title">The Future of Battery Technology: Trends and Innovations</h3>
+                        <p class="insight-text">Explore the latest advancements in battery technology and how they are shaping the future of energy storage. From solid-state batteries to new electrode materials, discover the innovations that are driving the industry forward.</p>
+                        <a href="articles/future-battery-technology.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Regular Articles -->
+                <div class="card insight-card insight-item all industry">
+                    <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="Electric Vehicle Market Growth" class="card-img">
+                    <div class="insight-content card-content">
+                        <div class="insight-meta">
+                            <div class="insight-category">Industry</div>
+                            <div class="insight-date">March 10, 2025</div>
+                        </div>
+                        <h3 class="card-title">Electric Vehicle Market Growth and Battery Demand</h3>
+                        <p class="insight-text">Analysis of the rapidly growing electric vehicle market and its impact on battery demand. Learn about the challenges and opportunities for battery manufacturers in this evolving landscape.</p>
+                        <a href="articles/ev-market-growth.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="card insight-card insight-item all sustainability">
+                    <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="Sustainable Battery Production" class="card-img">
+                    <div class="insight-content card-content">
+                        <div class="insight-meta">
+                            <div class="insight-category">Sustainability</div>
+                            <div class="insight-date">March 5, 2025</div>
+                        </div>
+                        <h3 class="card-title">Sustainable Battery Production: Challenges and Solutions</h3>
+                        <p class="insight-text">Examining the environmental impact of battery production and the industry's efforts to create more sustainable manufacturing processes. Discover how companies are reducing their carbon footprint.</p>
+                        <a href="articles/sustainable-battery-production.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="card insight-card insight-item all case-studies">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="Grid-Scale Energy Storage" class="card-img">
+                    <div class="insight-content card-content">
+                        <div class="insight-meta">
+                            <div class="insight-category">Case Studies</div>
+                            <div class="insight-date">February 28, 2025</div>
+                        </div>
+                        <h3 class="card-title">Grid-Scale Energy Storage: Success Stories</h3>
+                        <p class="insight-text">Case studies of successful grid-scale energy storage projects around the world. Learn how battery storage is helping to stabilize grids and integrate renewable energy sources.</p>
+                        <a href="articles/grid-scale-energy-storage.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="card insight-card insight-item all technology">
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="Battery Management Systems" class="card-img">
+                    <div class="insight-content card-content">
+                        <div class="insight-meta">
+                            <div class="insight-category">Technology</div>
+                            <div class="insight-date">February 20, 2025</div>
+                        </div>
+                        <h3 class="card-title">Advanced Battery Management Systems: The Brain Behind the Battery</h3>
+                        <p class="insight-text">An in-depth look at modern battery management systems and their critical role in optimizing battery performance, safety, and longevity. Discover the latest innovations in BMS technology.</p>
+                        <a href="articles/advanced-bms.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="card insight-card insight-item all news">
+                    <img src="https://images.unsplash.com/photo-1605281317010-fe5ffe798166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="Marine Electrification" class="card-img">
+                    <div class="insight-content card-content">
+                        <div class="insight-meta">
+                            <div class="insight-category">News</div>
+                            <div class="insight-date">February 15, 2025</div>
+                        </div>
+                        <h3 class="card-title">Marine Electrification: The Next Frontier</h3>
+                        <p class="insight-text">News and analysis on the growing trend of marine electrification. Learn how battery technology is transforming the maritime industry and reducing its environmental impact.</p>
+                        <a href="articles/marine-electrification.html" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination fade-in">
+                <div class="pagination-item">
+                    <a href="#" class="pagination-link active">1</a>
+                </div>
+                <div class="pagination-item">
+                    <a href="#" class="pagination-link">2</a>
+                </div>
+                <div class="pagination-item">
+                    <a href="#" class="pagination-link">3</a>
+                </div>
+                <div class="pagination-item">
+                    <a href="#" class="pagination-link">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="cta fade-in" style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2>Stay Informed</h2>
+                <p style="margin-bottom: 2rem;">Subscribe to our newsletter to receive the latest insights, articles, and updates from SIG Energy Technology.</p>
+                
+                <form class="newsletter-form" style="display: flex; max-width: 500px; margin: 0 auto;">
+                    <input type="email" placeholder="Your email address" class="form-control" style="flex: 1; margin-right: 1rem; border-radius: var(--border-radius);">
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="../../asset/SIG ENERGY TECHNOLOGY - logo static.png" alt="SIG Energy Technology Logo">
+                    </div>
+                    <p>SIG Energy Technology specializes in lithium-ion battery cells and modules, providing high-performance battery solutions for renewable energy and electric mobility.</p>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../../index.html">Home</a></li>
+                        <li class="footer-link"><a href="../products/index.html">Products</a></li>
+                        <li class="footer-link"><a href="../solutions/index.html">Solutions</a></li>
+                        <li class="footer-link"><a href="../insight/index.html">Insight</a></li>
+                        <li class="footer-link"><a href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h4 class="footer-title">Solutions</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../solutions/electric-mobility.html">Electric Mobility</a></li>
+                        <li class="footer-link"><a href="../solutions/renewable-energy-storage.html">Renewable Energy Storage</a></li>
+                        <li class="footer-link"><a href="../solutions/industrial-applications.html">Industrial Applications</a></li>
+                        <li class="footer-link"><a href="../solutions/marine-applications.html">Marine Applications</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div>Paris, France</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div>info@sig-innotech.com</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <div>+33 (0)1 XX XX XX XX</div>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 SIG Energy Technology. All rights reserved. <a href="../contact/terms.html">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../../js/main.js"></script>
+</body>
+</html>

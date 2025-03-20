@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Service - SIG Energy Technology</title>
+    <meta name="description" content="SIG Energy Technology's comprehensive battery testing and data analysis services for optimizing battery performance and reliability.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../asset/SIG ENERGY TECHNOLOGY - logo static.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    
+    <style>
+        /* Page-specific styles */
+        .service-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../asset/images/testEquipment.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 8rem 0 4rem;
+            margin-top: 80px;
+        }
+        
+        .service-section {
+            padding: 4rem 0;
+        }
+        
+        .service-section:nth-child(even) {
+            background-color: var(--light-gray);
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .service-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .service-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .service-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            color: var(--dark-gray);
+        }
+        
+        .service-features {
+            margin: 2rem 0;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-icon {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .feature-text h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .feature-text p {
+            margin-bottom: 0;
+            color: var(--dark-gray);
+        }
+        
+        .testing-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .testing-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+        }
+        
+        .testing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .testing-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .testing-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            text-align: center;
+        }
+        
+        .testing-description {
+            line-height: 1.6;
+            color: var(--dark-gray);
+        }
+        
+        .data-analysis-section {
+            background-color: var(--white);
+            padding: 4rem 0;
+        }
+        
+        .analysis-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+        
+        .analysis-intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .analysis-intro p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--dark-gray);
+        }
+        
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .analysis-item {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius);
+            transition: transform var(--transition-medium);
+        }
+        
+        .analysis-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .analysis-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .analysis-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .analysis-description {
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+        
+        .cta-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--white);
+            color: var(--primary-color);
+            font-weight: 500;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            transition: background-color var(--transition-fast), transform var(--transition-fast);
+        }
+        
+        .cta-btn:hover {
+            background-color: var(--light-gray);
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 992px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-image {
+                order: -1;
+            }
+            
+            .analysis-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Container - Will be populated by JavaScript -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Battery Testing & Data Service</h1>
+            <p>Optimize your battery performance with expert analysis</p>
+        </div>
+    </section>
+
+    <!-- Service Overview Section -->
+    <section class="service-section">
+        <div class="container">
+            <div class="service-grid fade-in">
+                <div class="service-content">
+                    <h2>Get reliable insights for your energy storage solutions</h2>
+                    <p>
+                        Our state-of-the-art testing facilities deliver accurate, detailed analysis to enhance the performance,
+                        reliability, and safety of your battery systems.
+                    </p>
+                    <p>
+                        Whether developing new technologies or validating existing systems, we provide the data you need to make
+                        confident decisions about your energy storage solutions.
+                    </p>
+                    
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Performance Characterization</h4>
+                                <p>Comprehensive testing for capacity, energy, and efficiency under real-world conditions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Safety Validation</h4>
+                                <p>Rigorous safety testing to ensure your batteries perform reliably in all situations.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-temperature-high"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Environmental Testing</h4>
+                                <p>Performance evaluation across temperatures and conditions your batteries will actually face.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="Battery Testing Equipment">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testing Types Section -->
+    <section class="service-section">
+        <div class="container">
+            <div class="section-header text-center fade-in">
+                <h2>Our Testing Capabilities</h2>
+                <p>Comprehensive testing solutions for all battery types and applications</p>
+            </div>
+            
+            <div class="testing-types fade-in">
+                <div class="testing-card">
+                    <div class="testing-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h3 class="testing-title">Capacity & Energy Testing</h3>
+                    <p class="testing-description">
+                        Precise measurement of battery capacity and energy content under various discharge rates and temperatures.
+                        Our testing protocols follow industry standards including IEC 61960 and IEEE 1725 to ensure reliable, 
+                        comparable results.
+                    </p>
+                </div>
+                
+                <div class="testing-card">
+                    <div class="testing-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="testing-title">Power & Pulse Testing</h3>
+                    <p class="testing-description">
+                        Evaluation of battery power capability through pulse discharge testing, internal resistance measurement,
+                        and dynamic load response. Critical for applications requiring high power delivery or rapid response times.
+                    </p>
+                </div>
+                
+                <div class="testing-card">
+                    <div class="testing-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="testing-title">Cycle Life Testing</h3>
+                    <p class="testing-description">
+                        Long-term cycling tests to determine battery durability and capacity retention over thousands of 
+                        charge-discharge cycles. Custom cycling profiles can simulate your specific application conditions.
+                    </p>
+                </div>
+                
+                <div class="testing-card">
+                    <div class="testing-icon">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <h3 class="testing-title">Thermal Performance</h3>
+                    <p class="testing-description">
+                        Comprehensive thermal characterization including heat generation during cycling, thermal conductivity,
+                        and performance across temperature extremes from -40°C to +85°C in environmental chambers.
+                    </p>
+                </div>
+                
+                <div class="testing-card">
+                    <div class="testing-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3 class="testing-title">Abuse Testing</h3>
+                    <p class="testing-description">
+                        Safety-focused testing including overcharge, over-discharge, external short circuit, crush, penetration,
+                        and thermal stability tests to validate battery safety systems and understand failure modes.
+                    </p>
+                </div>
+                
+                <div class="testing-card">
+                    <div class="testing-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="testing-title">BMS Validation</h3>
+                    <p class="testing-description">
+                        Comprehensive testing of battery management system functionality including protection features,
+                        balancing algorithms, state estimation accuracy, and communication interfaces.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Analysis Section -->
+    <section class="data-analysis-section">
+        <div class="container">
+            <div class="analysis-intro fade-in">
+                <h2>Advanced Data Analysis</h2>
+                <p>
+                    Our testing services go beyond raw data collection. Our expert engineers apply sophisticated 
+                    analysis techniques to extract meaningful insights that drive battery optimization and innovation.
+                </p>
+            </div>
+            
+            <div class="analysis-grid fade-in">
+                <div class="analysis-item">
+                    <div class="analysis-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="analysis-title">Performance Modeling</h3>
+                    <p class="analysis-description">
+                        Development of empirical and physics-based models to predict battery performance under various 
+                        operating conditions, enabling optimization without extensive physical testing.
+                    </p>
+                </div>
+                
+                <div class="analysis-item">
+                    <div class="analysis-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="analysis-title">Failure Analysis</h3>
+                    <p class="analysis-description">
+                        Detailed investigation of battery failure modes using advanced diagnostic techniques to identify 
+                        root causes and develop mitigation strategies for improved reliability.
+                    </p>
+                </div>
+                
+                <div class="analysis-item">
+                    <div class="analysis-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="analysis-title">AI-Powered Analytics</h3>
+                    <p class="analysis-description">
+                        Application of machine learning algorithms to battery test data for pattern recognition, 
+                        anomaly detection, and predictive maintenance recommendations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Section -->
+    <section class="service-section">
+        <div class="container">
+            <div class="service-grid fade-in">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="Battery Testing Laboratory">
+                </div>
+                
+                <div class="service-content">
+                    <h2>State-of-the-Art Testing Facilities</h2>
+                    <p>
+                        Our testing laboratory is equipped with the latest technology to provide accurate, reliable data 
+                        for all battery types and sizes, from individual cells to complete battery systems.
+                    </p>
+                    
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>High-Precision Cyclers</h4>
+                                <p>Battery testing systems with current ranges from μA to kA and voltage ranges up to 1000V, with measurement accuracy better than 0.05%.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-temperature-low"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Environmental Chambers</h4>
+                                <p>Temperature-controlled testing environments ranging from -40°C to +85°C with humidity control for realistic operating condition simulation.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Diagnostic Equipment</h4>
+                                <p>Advanced tools including electrochemical impedance spectroscopy (EIS), thermal imaging, and post-mortem analysis capabilities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <h2>Ready to get started?</h2>
+                <p>Contact our testing experts to discuss your specific requirements and get your batteries performing at their best.</p>
+                <a href="../contact/index.html" class="cta-btn">Contact us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Container - Will be populated by JavaScript -->
+    <div id="footer-container"></div>
+
+    <!-- JavaScript -->
+    <script src="../../js/main.js"></script>
+</body>
+</html>

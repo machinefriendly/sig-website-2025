@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Solutions - SIG Energy Technology</title>
+    <meta name="description" content="Explore SIG Energy Technology's complete battery solutions for various applications including electric mobility, renewable energy storage, and industrial use.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../asset/SIG ENERGY TECHNOLOGY - logo static.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    
+    <style>
+        /* Page-specific styles */
+        .product-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1593941707882-a5bba53b0091?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 8rem 0 4rem;
+            margin-top: 80px;
+        }
+        
+        .product-specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .spec-item {
+            background-color: var(--light-gray);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+        
+        .spec-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .spec-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .product-models {
+            margin-top: var(--spacing-lg);
+        }
+        
+        .model-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: var(--spacing-md);
+        }
+        
+        .model-table th, .model-table td {
+            padding: var(--spacing-sm);
+            text-align: left;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+        
+        .model-table th {
+            background-color: var(--light-gray);
+            font-weight: 600;
+        }
+        
+        .model-table tr:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .applications {
+            margin-top: var(--spacing-lg);
+        }
+        
+        .application-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+        
+        .application-item {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .application-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .application-content {
+            padding: var(--spacing-md);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Container - Will be populated by JavaScript -->
+    <div id="header-container"></div>
+
+    <!-- Product Hero Section -->
+    <section class="product-hero">
+        <div class="container">
+            <h1>Complete Battery Solutions</h1>
+            <p class="hero-subtitle">High-performance, integrated battery systems for diverse applications</p>
+        </div>
+    </section>
+
+    <!-- Product Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Battery Overview</h2>
+            </div>
+            
+            <div class="row fade-in">
+                <div class="col">
+                    <p>SIG Energy Technology offers complete battery solutions that integrate our high-quality cells, modules, and management systems into ready-to-deploy battery packages. Our batteries are designed for optimal performance, safety, and longevity across a wide range of applications.</p>
+                    
+                    <p>Each battery solution undergoes rigorous testing and validation in our state-of-the-art laboratory to ensure reliability and performance in real-world conditions. With customizable options and various capacity ranges, we can provide the perfect battery solution for your specific needs.</p>
+                </div>
+            </div>
+            
+            <div class="product-specs fade-in">
+                <div class="spec-item">
+                    <div class="spec-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="spec-value">Up to 100 kWh</div>
+                    <div class="spec-label">Energy Capacity</div>
+                </div>
+                
+                <div class="spec-item">
+                    <div class="spec-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div class="spec-value">Up to 500 kW</div>
+                    <div class="spec-label">Power Output</div>
+                </div>
+                
+                <div class="spec-item">
+                    <div class="spec-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <div class="spec-value">3,000+</div>
+                    <div class="spec-label">Cycle Life</div>
+                </div>
+                
+                <div class="spec-item">
+                    <div class="spec-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="spec-value">IP67</div>
+                    <div class="spec-label">Protection Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Models -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Battery Models</h2>
+            </div>
+            
+            <div class="product-models fade-in">
+                <h3>Standard Battery Models</h3>
+                <p>Our standard battery models are designed for common applications and quick deployment. Each model offers a balance of performance, reliability, and value.</p>
+                
+                <table class="model-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Capacity</th>
+                            <th>Voltage</th>
+                            <th>Max Current</th>
+                            <th>Weight</th>
+                            <th>Dimensions (mm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr onclick="window.location.href='lf105-detail.html'" style="cursor:pointer;">
+                            <td>L135F72 (CAM72)</td>
+                            <td>5 kWh</td>
+                            <td>48V</td>
+                            <td>100A</td>
+                            <td>40 kg</td>
+                            <td>600 x 400 x 200</td>
+                        </tr>
+                        <tr onclick="window.location.href='lf105-detail.html'" style="cursor:pointer;">
+                            <td>LF105</td>
+                            <td>10 kWh</td>
+                            <td>48V</td>
+                            <td>200A</td>
+                            <td>75 kg</td>
+                            <td>700 x 500 x 250</td>
+                        </tr>
+                        <tr onclick="window.location.href='lf105-detail.html'" style="cursor:pointer;">
+                            <td>L173F163</td>
+                            <td>20 kWh</td>
+                            <td>96V</td>
+                            <td>250A</td>
+                            <td>150 kg</td>
+                            <td>800 x 600 x 300</td>
+                        </tr>
+                        <tr onclick="window.location.href='lf105-detail.html'" style="cursor:pointer;">
+                            <td>L173F230</td>
+                            <td>50 kWh</td>
+                            <td>400V</td>
+                            <td>300A</td>
+                            <td>350 kg</td>
+                            <td>1000 x 800 x 400</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3 style="margin-top: var(--spacing-lg);">Custom Battery Solutions</h3>
+                <p>Need a custom battery solution? Our engineering team can design and develop tailored battery systems to meet your specific requirements. Contact us to discuss your project needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Applications</h2>
+            </div>
+            
+            <div class="applications fade-in">
+                <p>Our battery solutions are designed for a wide range of applications across various industries. Here are some common use cases:</p>
+                
+                <div class="application-grid">
+                    <div class="application-item">
+                        <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="Electric Mobility" class="application-img">
+                        <div class="application-content">
+                            <h3>Electric Mobility</h3>
+                            <p>Power electric vehicles, from passenger cars to commercial fleets, with our high-performance battery solutions.</p>
+                            <p><strong>Recommended Models:</strong> 
+                                <a href="lf105-detail.html">L135F72 (CAM72)</a>, 
+                                <a href="lf105-detail.html">L173F230</a>, 
+                                <a href="lf105-detail.html">LF105</a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="application-item">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="Renewable Energy Storage" class="application-img">
+                        <div class="application-content">
+                            <h3>Renewable Energy Storage</h3>
+                            <p>Store energy from solar, wind, and other renewable sources for use when needed.</p>
+                            <p><strong>Recommended Models:</strong> 
+                                <a href="lf105-detail.html">L173F163</a>, 
+                                <a href="lf105-detail.html">L173F230</a>, 
+                                <a href="lf105-detail.html">L135F72 (CAM72)</a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="application-item">
+                        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="Industrial Applications" class="application-img">
+                        <div class="application-content">
+                            <h3>Industrial Applications</h3>
+                            <p>Power industrial equipment and machinery with reliable and robust battery solutions.</p>
+                            <p><strong>Recommended Models:</strong> 
+                                <a href="lf105-detail.html">LF105</a>, 
+                                <a href="lf105-detail.html">L173F163</a>, 
+                                <a href="lf105-detail.html">L135F72 (CAM72)</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="cta fade-in" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2>Ready to Power Your Project?</h2>
+                <p style="margin-bottom: 2rem;">Contact us today to discuss how SIG Energy Technology can provide the perfect battery solution for your needs.</p>
+                <div class="cta-buttons">
+                    <a href="../contact/index.html" class="btn btn-outline">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="../../asset/SIG ENERGY TECHNOLOGY - logo static.png" alt="SIG Energy Technology Logo">
+                    </div>
+                    <p>SIG Energy Technology specializes in lithium-ion battery cells and modules, providing high-performance battery solutions for renewable energy and electric mobility.</p>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../../index.html">Home</a></li>
+                        <li class="footer-link"><a href="../products/index.html">Products</a></li>
+                        <li class="footer-link"><a href="../solutions/index.html">Solutions</a></li>
+                        <li class="footer-link"><a href="../insight/index.html">Insight</a></li>
+                        <li class="footer-link"><a href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h4 class="footer-title">Solutions</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../solutions/electric-mobility.html">Electric Mobility</a></li>
+                        <li class="footer-link"><a href="../solutions/renewable-energy-storage.html">Renewable Energy Storage</a></li>
+                        <li class="footer-link"><a href="../solutions/industrial-applications.html">Industrial Applications</a></li>
+                        <li class="footer-link"><a href="../solutions/marine-applications.html">Marine Applications</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div>Paris, France</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div>info@sig-innotech.com</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <div>+33 (0)1 XX XX XX XX</div>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 SIG Energy Technology. All rights reserved. <a href="../contact/terms.html">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Cells - SIG Energy Technology</title>
+    <meta name="description" content="Explore SIG Energy Technology's range of high-performance lithium-ion battery cells including cylindrical, prismatic, and pouch cells.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../asset/SIG ENERGY TECHNOLOGY - logo static.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    
+    <!-- noUiSlider for range slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.js"></script>
+    
+    <style>
+        /* Page-specific styles */
+        .product-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://www.sig-innotech.com/en/products/cell/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbanner.a9a2d9c3.jpg&w=1920&q=75');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 8rem 0 4rem;
+            margin-top: 80px;
+        }
+        
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-md);
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius);
+        }
+        
+        .category-link {
+            padding: 0.5rem 1rem;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+            color: var(--dark);
+        }
+        
+        .category-link:hover, .category-link.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .filter-section {
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-md);
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius);
+        }
+        
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .filter-group {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .filter-label {
+            font-weight: 500;
+            margin-bottom: var(--spacing-xs);
+            display: block;
+        }
+        
+        .filter-options {
+            display: flex;
+            gap: var(--spacing-xs);
+        }
+        
+        .filter-option {
+            padding: 0.5rem 1rem;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .filter-option.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .slider-container {
+            padding: 0 var(--spacing-sm);
+            margin-top: var(--spacing-md);
+        }
+        
+        .slider-values {
+            display: flex;
+            justify-content: space-between;
+            margin-top: var(--spacing-xs);
+            font-size: 0.875rem;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+        }
+        
+        .product-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            cursor: pointer;
+            transition: background-color var(--transition-fast);
+        }
+        
+        .product-card:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .product-image {
+            height: 200px;
+            width: 100%;
+            object-fit: contain;
+            background-color: var(--white);
+            padding: var(--spacing-sm);
+        }
+        
+        .product-content {
+            padding: var(--spacing-md);
+        }
+        
+        .product-title {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .product-specs {
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .product-spec {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: var(--spacing-xs);
+            font-size: 0.875rem;
+        }
+        
+        .spec-label {
+            color: var(--dark-gray);
+        }
+        
+        .spec-value {
+            font-weight: 500;
+        }
+        
+        .product-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .product-sku {
+            font-size: 0.875rem;
+            color: var(--dark-gray);
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: var(--spacing-lg);
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius);
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Container - Will be populated by JavaScript -->
+    <div id="header-container"></div>
+
+    <br>
+
+    
+    <!-- Category Navigation -->
+    <section class="section">
+        <div class="container">
+            
+            
+            <!-- Filters -->
+            <div class="filter-section fade-in">
+                
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <label class="filter-label">Cell Type</label>
+                        <div class="filter-options" id="cell-type-filter">
+                            <div class="filter-option active" data-filter="all">All</div>
+                            <div class="filter-option" data-filter="prismatic">Prismatic</div>
+                            <div class="filter-option" data-filter="cylindrical">Cylindrical</div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Chemistry</label>
+                        <div class="filter-options" id="chemistry-filter">
+                            <div class="filter-option active" data-filter="all">All</div>
+                            <div class="filter-option" data-filter="nmc">NMC</div>
+                            <div class="filter-option" data-filter="lfp">LFP</div>
+                            <div class="filter-option" data-filter="nca">NCA</div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Capacity Range (Ah)</label>
+                        <div class="slider-container">
+                            <div id="capacity-slider"></div>
+                            <div class="slider-values">
+                                <span id="capacity-min">0 Ah</span>
+                                <span id="capacity-max">300 Ah</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Grid -->
+            <div class="product-grid fade-in" id="product-grid">
+                <!-- Prismatic Cells -->
+                <div class="product-card" data-type="prismatic" data-chemistry="lfp" data-capacity="105" onclick="window.location.href='lf105-detail.html'">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d638ee89a16e40001315e0e/1567072969657-NK59ESXSDCW5UZDLSYTR/CELLULE-SIG-SOLUTION-CELLULELF105_sig-innotech.com?format=500w" alt="LFP 105Ah Prismatic Cell" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">LFP 105Ah Prismatic Cell</h3>
+                        <div class="product-specs">
+                            <div class="product-spec">
+                                <span class="spec-label">Cell Type:</span>
+                                <span class="spec-value">Prismatic</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Chemistry:</span>
+                                <span class="spec-value">LFP</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">105 Ah</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Voltage:</span>
+                                <span class="spec-value">3.2V</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-sku">SKU: LF105</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-type="prismatic" data-chemistry="nmc" data-capacity="173" onclick="window.location.href='lf105-detail.html'">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d638ee89a16e40001315e0e/1620736405250-Y8XOWNS5OXFGXABAXKU1/Cell-L173F163B_sig-innotech.com.jpg?format=500w" alt="NMC 173Ah Prismatic Cell" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">NMC 173Ah Prismatic Cell</h3>
+                        <div class="product-specs">
+                            <div class="product-spec">
+                                <span class="spec-label">Cell Type:</span>
+                                <span class="spec-value">Prismatic</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Chemistry:</span>
+                                <span class="spec-value">NMC</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">173 Ah</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Voltage:</span>
+                                <span class="spec-value">3.7V</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-sku">SKU: L173F163</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-type="prismatic" data-chemistry="nmc" data-capacity="230" onclick="window.location.href='lf105-detail.html'">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d638ee89a16e40001315e0e/1627393743816-FJ7I6SY90S3NXRHR0YTH/L173F163B+3.png?format=500w" alt="NMC 230Ah Prismatic Cell" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">NMC 230Ah Prismatic Cell</h3>
+                        <div class="product-specs">
+                            <div class="product-spec">
+                                <span class="spec-label">Cell Type:</span>
+                                <span class="spec-value">Prismatic</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Chemistry:</span>
+                                <span class="spec-value">NMC</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">230 Ah</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Voltage:</span>
+                                <span class="spec-value">3.7V</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-sku">SKU: L173F230</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cylindrical Cells -->
+                <div class="product-card" data-type="cylindrical" data-chemistry="nmc" data-capacity="3" onclick="window.location.href='lf105-detail.html'">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d638ee89a16e40001315e0e/88a48723-99d8-45f6-a2ed-406086baac56/N18650CP.png?format=500w" alt="18650 NMC 3Ah Cell" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">18650 NMC 3Ah Cell</h3>
+                        <div class="product-specs">
+                            <div class="product-spec">
+                                <span class="spec-label">Cell Type:</span>
+                                <span class="spec-value">Cylindrical</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Chemistry:</span>
+                                <span class="spec-value">NMC</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">3 Ah</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Voltage:</span>
+                                <span class="spec-value">3.6V</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-sku">SKU: 18650-3000</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-type="cylindrical" data-chemistry="nca" data-capacity="4.8" onclick="window.location.href='lf105-detail.html'">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d638ee89a16e40001315e0e/a7663c18-c5c4-4296-a11f-07788c0bc2c7/N18650CNP.jpg?format=500w" alt="21700 NCA 4.8Ah Cell" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">21700 NCA 4.8Ah Cell</h3>
+                        <div class="product-specs">
+                            <div class="product-spec">
+                                <span class="spec-label">Cell Type:</span>
+                                <span class="spec-value">Cylindrical</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Chemistry:</span>
+                                <span class="spec-value">NCA</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">4.8 Ah</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Voltage:</span>
+                                <span class="spec-value">3.6V</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-sku">SKU: 21700-4800</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pouch Cells -->
+                <div class="product-card" data-type="pouch" data-chemistry="nmc" data-capacity="20" onclick="window.location.href='lf105-detail.html'">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d638ee89a16e40001315e0e/0133301c-fd6c-47ca-b4d5-5746adac2a04/18650Fe-18000_thumbnail.png?format=500w" alt="NMC 20Ah Pouch Cell" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">NMC 20Ah Pouch Cell</h3>
+                        <div class="product-specs">
+                            <div class="product-spec">
+                                <span class="spec-label">Cell Type:</span>
+                                <span class="spec-value">Pouch</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Chemistry:</span>
+                                <span class="spec-value">NMC</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">20 Ah</span>
+                            </div>
+                            <div class="product-spec">
+                                <span class="spec-label">Voltage:</span>
+                                <span class="spec-value">3.7V</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-sku">SKU: P20-NMC</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- No Results Message -->
+                <div class="no-results" style="display: none;">
+                    <h3>No products match your filter criteria</h3>
+                    <p>Please try adjusting your filters to see more products.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="cta fade-in" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2>Need a Custom Cell Solution?</h2>
+                <p style="margin-bottom: 2rem;">Our engineering team can help you select the right cells for your application or develop custom solutions.</p>
+                <a href="../contact/index.html" class="btn">Contact Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="../../asset/SIG ENERGY TECHNOLOGY - logo static.png" alt="SIG Energy Technology Logo">
+                    </div>
+                    <p>SIG Energy Technology specializes in lithium-ion battery cells and modules, providing high-performance battery solutions for renewable energy and electric mobility.</p>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../../index.html">Home</a></li>
+                        <li class="footer-link"><a href="../products/index.html">Products</a></li>
+                        <li class="footer-link"><a href="../solutions/index.html">Solutions</a></li>
+                        <li class="footer-link"><a href="../insight/index.html">Insight</a></li>
+                        <li class="footer-link"><a href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h4 class="footer-title">Solutions</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../solutions/electric-mobility.html">Electric Mobility</a></li>
+                        <li class="footer-link"><a href="../solutions/renewable-energy-storage.html">Renewable Energy Storage</a></li>
+                        <li class="footer-link"><a href="../solutions/industrial-applications.html">Industrial Applications</a></li>
+                        <li class="footer-link"><a href="../solutions/marine-applications.html">Marine Applications</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div>Paris, France</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div>info@sig-innotech.com</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <div>+33 (0)1 XX XX XX XX</div>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 SIG Energy Technology. All rights reserved. <a href="../contact/terms.html">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../../js/main.js"></script>
+    
+    <!-- Filter and Slider Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize capacity slider
+            const capacitySlider = document.getElementById('capacity-slider');
+            const capacityMin = document.getElementById('capacity-min');
+            const capacityMax = document.getElementById('capacity-max');
+            
+            noUiSlider.create(capacitySlider, {
+                start: [0, 300],
+                connect: true,
+                range: {
+                    'min': 0,
+                    'max': 300
+                },
+                step: 1
+            });
+            
+            capacitySlider.noUiSlider.on('update', function(values, handle) {
+                const min = Math.round(values[0]);
+                const max = Math.round(values[1]);
+                capacityMin.textContent = min + ' Ah';
+                capacityMax.textContent = max + ' Ah';
+                filterProducts();
+            });
+            
+            // Cell Type Filter
+            const cellTypeOptions = document.querySelectorAll('#cell-type-filter .filter-option');
+            cellTypeOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    cellTypeOptions.forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                    filterProducts();
+                });
+            });
+            
+            // Chemistry Filter
+            const chemistryOptions = document.querySelectorAll('#chemistry-filter .filter-option');
+            chemistryOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    chemistryOptions.forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                    filterProducts();
+                });
+            });
+            
+            // Filter Products Function
+            function filterProducts() {
+                const selectedCellType = document.querySelector('#cell-type-filter .filter-option.active').getAttribute('data-filter');
+                const selectedChemistry = document.querySelector('#chemistry-filter .filter-option.active').getAttribute('data-filter');
+                const capacityRange = capacitySlider.noUiSlider.get();
+                const minCapacity = Math.round(capacityRange[0]);
+                const maxCapacity = Math.round(capacityRange[1]);
+                
+                const products = document.querySelectorAll('.product-card');
+                let visibleCount = 0;
+                
+                products.forEach(product => {
+                    const productType = product.getAttribute('data-type');
+                    const productChemistry = product.getAttribute('data-chemistry');
+                    const productCapacity = parseFloat(product.getAttribute('data-capacity'));
+                    
+                    const typeMatch = selectedCellType === 'all' || productType === selectedCellType;
+                    const chemistryMatch = selectedChemistry === 'all' || productChemistry === selectedChemistry;
+                    const capacityMatch = productCapacity >= minCapacity && productCapacity <= maxCapacity;
+                    
+                    if (typeMatch && chemistryMatch && capacityMatch) {
+                        product.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+                
+                // Show/hide no results message
+                const noResultsMessage = document.querySelector('.no-results');
+                if (visibleCount === 0) {
+                    noResultsMessage.style.display = 'block';
+                } else {
+                    noResultsMessage.style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

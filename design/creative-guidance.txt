@@ -1,0 +1,227 @@
+Creative brief 
+Presentation of the company and its context 
+Présentation de l’entreprise et de son contexte
+Company activity 
+Activité de l’entreprise
+SIG Energy Technology (SIG Innotech) is a French company founded in 2015 in Paris, specializing in lithium-ion battery cells and modules. The company focuses on developing and supplying high-performance battery solutions to support the integration of renewable energy and the expansion of electric mobility. By distributing lithium-ion cells and designing custom battery packs across Europe, SIG Innotech helps reduce environmental impact through cleaner energy storage and transportation solutions.
+SIG Innotech collaborates closely with system integrators and project developers to deliver batteries tailored to specific needs. Every battery solution can include not only the cells and modules but also the Battery Management System (BMS), connectors, and protective components – all optimized for the best performance and safety. The company emphasizes eco-design in its hardware: modules are engineered for easy disassembly to simplify recycling, and they incorporate recycled materials (such as plastics from electronic waste) whenever possible. This commitment to sustainability ensures that each product is both high-quality and aligned with environmental standards.
+Expertise and Capabilities
+SIG Innotech’s expertise spans both hardware engineering and software development, enabling the company to provide comprehensive energy storage solutions. The team’s skills cover the full spectrum of battery system development – from initial design through testing and final integration. Key areas of expertise include:
+Hardware Engineering & Battery Design
+● Battery Cell & Module Design: The company’s engineering team (bureau d’étude) offers support at each stage of a battery project. They select high-quality, reliable lithium-ion cells and assemble them into modules that meet client specifications. Mechanical and electrical designs are optimized for performance, safety, and longevity. Each module is designed with modularity and serviceability in mind, which means batteries can be easily scaled and maintained.
+● Custom Battery Packs: SIG Innotech develops complete battery packs, integrating cells into modules and modules into full battery systems. These packs are customized for the application at hand – whether it’s an electric vehicle, an industrial machine, or a stationary storage system. The hardware design includes robust enclosures, thermal management solutions, and all necessary connectors and interfaces.
+● Battery Management Systems (BMS) Integration: Hardware expertise also extends to integrating BMS hardware. SIG Innotech proposes and incorporates BMS units suited to the application’s requirements (voltage, capacity, safety features, communication protocols, etc.). The company works with both off-the-shelf and custom BMS, ensuring that the battery packs are monitored and controlled effectively for optimal performance and safety.
+Embedded Software & BMS Development
+● Embedded Software: Alongside hardware, SIG Innotech provides embedded software expertise to guarantee that the battery’s electronic control systems function seamlessly. This includes firmware development for BMS and other microcontrollers within the battery pack. The embedded software manages critical functions such as cell balancing, state-of-charge calculations, fault detection, and communications with other systems (like a vehicle’s onboard computer or an energy management system in a building).
+● System Integration: The company’s software engineers ensure that the BMS firmware is finely tuned to the specific battery chemistry and use-case. They implement algorithms for accurate State-of-Charge (SoC) and State-of-Health (SoH) estimation, which are essential for reliable operation. By mastering both the hardware and the software, SIG Innotech can optimize the interaction between the physical battery components and the digital control logic. This integrated approach results in battery systems that are efficient, safe, and intelligent, ready to communicate with broader systems (vehicles, charging infrastructure, smart grids) through standard protocols.
+● Data Management & Monitoring: SIG Innotech also utilizes software tools for data logging and analysis. During both development and deployment, battery performance data is collected (e.g., charge/discharge rates, temperatures, voltages of individual cells). The company’s software processes this data to inform improvements and to provide clients with insights about their battery’s performance over time. Remote monitoring solutions can be implemented, enabling real-time tracking of battery status and predictive maintenance.
+In-House Battery Testing Laboratory
+One of SIG Innotech’s key strengths is its in-house battery cell testing capability. The company has established its own testing laboratory to rigorously evaluate cells and battery modules under various conditions. This internal lab ensures that only proven, reliable cells are used in client projects and that custom battery designs meet their specifications. The in-house testing services include:
+● Internal Resistance Testing (DCR): Measuring the Direct Current Resistance of cells to assess their internal impedance. A low internal resistance is crucial for high power output and efficiency. SIG Innotech performs DCR tests to select cells that will deliver the necessary performance for high-current applications.
+● Capacity Testing at Different C-Rates: Verifying cell capacity and behavior under various charge and discharge rates (C-rates). By testing cells at slow, moderate, and high discharge rates, the team can characterize how the capacity and voltage response hold up under stress. This helps in understanding the cell’s performance for both energy-intensive and power-intensive use cases.
+● State-of-Charge vs. Open-Circuit Voltage (SOC-OCV) Characterization: Recording the cell’s voltage at different states of charge to establish an SOC-OCV curve. This data is important for accurate battery management system calibration, as it helps translate voltage readings into precise state-of-charge estimates.
+● Cycling Tests (Lifecycle Testing): Performing repeated charge/discharge cycles (for example, continuous 1C charge and 1C discharge cycles) to evaluate how the cell’s capacity and performance degrade over time. Cycle life testing (such as 100% Depth of Discharge cycles) provides insight into the battery longevity and helps predict maintenance intervals or replacement timelines.
+● Environmental and Safety Testing: Although not explicitly listed on the site, SIG Innotech’s laboratory is equipped to conduct a range of other tests on request. This may include thermal performance evaluations, safety tests under abuse conditions (overcharge, short-circuit, etc.), and verifying the effectiveness of battery protection features. All tests adhere to relevant standards to ensure the batteries meet industry safety and reliability criteria.
+By conducting these tests in-house, SIG Innotech maintains high quality control over the components it supplies and designs. The laboratory’s findings guide the selection of cells and the design of battery packs, ensuring that each solution is validated and reliable before deployment.
+
+Company values
+Valeurs de l’entreprise
+ 
+Commitment to Quality and Innovation
+SIG Innotech maintains a professional, engineering-driven culture focused on quality and innovation. With over half a million lithium-ion cells supplied to date and a presence in more than 30 countries, the company has built a reputation for reliability. Its in-house R&D and testing capabilities enable continuous improvement of battery technologies. The team stays updated with the latest advancements in battery chemistry, power electronics, and software algorithms, ensuring clients receive state-of-the-art solutions.
+Moreover, the company’s commitment to eco-design and recycling reflects a forward-looking, responsible business approach. By designing batteries that can be easily disassembled and recycled, SIG Innotech not only helps clients achieve performance goals but also supports environmental sustainability over the product lifecycle.
+
+Company target 
+Cible de l’entreprise
+
+SIG ENERGY TECHNOLOGY primarily serves business clients (B2B), including manufacturers, energy companies, and system integrators across multiple industries. The company’s high-performance battery solutions and in-house testing capabilities make it a strategic partner in sectors ranging from electric mobility and industrial electrification to renewable energy storage and marine applications.
+
+1. Electric Mobility & Transportation
+Target Customers:
+● OEMs (Original Equipment Manufacturers): Companies manufacturing electric vehicles (EVs), hybrid vehicles, or other electrified transport solutions.
+● Fleet Operators & Retrofit Companies: Businesses converting existing vehicles (e.g., buses, utility trucks) to electric power.
+● Public Transport Companies: Municipal transit operators needing battery solutions for electric buses, trams, and shared mobility services.
+● Autonomous Vehicle Developers: Startups and companies working on self-driving electric shuttles, taxis, or last-mile delivery vehicles.
+Market Scope:
+● SIG Innotech provides battery modules and packs with integrated Battery Management Systems (BMS) for various EV applications.
+● These batteries are designed for high performance, safety, and long cycle life, meeting the needs of transportation electrification.
+2. Industrial & Commercial Equipment Electrification
+Target Customers:
+● Material Handling Equipment Manufacturers: Producers of forklifts, pallet trucks, and automated guided vehicles (AGVs) that require efficient lithium-ion battery packs.
+● Construction & Heavy Machinery Companies: Companies developing electric versions of industrial cranes, loaders, and earth-moving equipment.
+● Street Cleaning & Municipal Services: Manufacturers of electric-powered cleaning machines, road sweepers, and other urban service vehicles.
+Market Scope:
+● SIG Innotech supports industrial electrification with rugged battery solutions that can withstand harsh conditions while providing high energy density and fast charging capabilities.
+3. Marine & Specialty Vehicles
+Target Customers:
+● Boat & Yacht Manufacturers: Companies designing electric or hybrid-powered boats and marine vessels.
+● Naval & Defense Applications: Entities requiring reliable, high-performance batteries for military or research vessels.
+● Specialty Vehicle Producers: Developers of battery-powered agricultural machines, airport ground support equipment, and electric rail systems.
+Market Scope:
+● SIG’s batteries are designed for high power output, durability, and compliance with marine safety standards.
+● The company focuses on high-efficiency battery packs for sustainable marine transport and specialized industrial applications.
+4. Stationary Energy Storage & Renewable Integration
+Target Customers:
+● Renewable Energy Companies: Developers of solar and wind energy projects needing battery storage solutions.
+● Microgrid & Smart Grid Operators: Businesses building decentralized energy storage systems for grid stabilization.
+● Telecommunications & Data Centers: Companies requiring backup power and energy storage for critical infrastructure.
+Market Scope:
+● SIG Innotech offers customized battery storage solutions that help balance energy supply and demand.
+● The company’s solutions support solar and wind integration, peak shaving, and backup power applications.
+	5. Residential & Commercial Energy Storage
+Target Customers:
+● Homeowners & Building Managers: Individuals and businesses looking for energy storage solutions for solar energy and off-grid applications.
+● System Integrators & Energy Storage Providers: Companies installing and managing battery-based energy storage for homes and businesses.
+Market Scope:
+● SIG’s modular lithium-ion battery systems are designed for self-consumption, grid backup, and energy efficiency in residential and commercial buildings.
+6. R&D, Testing & Prototyping Services
+Target Customers:
+● Research Institutions & Universities: Organizations developing new battery technologies or testing energy storage solutions.
+● Automotive & Industrial Battery Developers: Companies that need battery testing and validation services before mass production.
+● Startups & Innovators: Businesses working on next-generation energy storage looking for reliable partners to validate prototypes.
+Market Scope:
+● SIG Innotech provides in-house battery testing to help clients validate battery cells, modules, and packs before deployment.
+● The company’s expertise in hardware, software, and battery management systems (BMS) allows for rapid prototyping and integration support.
+
+
+
+What sets you apart from the competition 
+Ce qui vous différencie de la concurrence
+1. Proven Expertise & Long-Term Industry Presence
+SIG Innotech has established itself as a professional and reliable partner in the battery industry since its founding in 2015. With nearly a decade of experience, the company has successfully delivered high-performance lithium-ion battery solutions to various industries, including electric mobility, industrial equipment, and renewable energy storage.
+Key Strengths:
+● Track Record of Success: SIG has supplied over 500,000 lithium-ion cells and deployed battery solutions across 30+ countries, proving its ability to scale and meet high customer demands.
+● Trusted by Industry Leaders: The company has built strong relationships with OEMs, system integrators, and industrial partners, earning a reputation for delivering reliable and high-quality battery systems.
+Competitive Advantage: Unlike newer or less specialized competitors, SIG Innotech offers deep technical knowledge and years of proven experience, ensuring customers receive tested and performance-validated battery solutions.
+2. High-Quality Control & Global Sourcing Network
+One of SIG Innotech’s core strengths is its strict quality control across the entire battery supply chain. The company has built a strong global sourcing network to ensure that only the best battery cells and components are used in its solutions.
+Key Strengths:
+● Worldwide Supplier Network: SIG sources high-quality lithium-ion cells and components from leading manufacturers in Asia, Europe, and North America, ensuring performance consistency and reliability.
+● Rigorous Testing & Validation: Before integrating any cell or battery component, SIG conducts in-house testing for performance, longevity, and safety. This ensures that each component meets strict quality and compliance standards.
+● Custom Selection & Matching: Unlike competitors who rely on generic battery packs, SIG tailors cell selection based on application needs (e.g., high energy density vs. high power output).
+● Continuous Performance Monitoring: The company continuously tracks supplier quality metrics and improves battery management algorithms to enhance overall system efficiency.
+Competitive Advantage: Many competitors offer off-the-shelf solutions with limited quality control. SIG ensures higher reliability by sourcing only the best components and rigorously testing them before delivery.
+3. Strong Network in Europe’s Clean Energy Sector
+SIG Innotech has deep-rooted partnerships in the European clean energy ecosystem, positioning it as a key player in the energy transition movement.
+Key Strengths:
+● Close Collaboration with European Renewable Energy & E-Mobility Companies: SIG actively works with partners involved in electric transportation, smart grids, and sustainable power solutions.
+● Compliance with European Standards & Regulations: All battery solutions meet or exceed EU safety, environmental, and performance requirements, ensuring compatibility with European projects.
+● Participation in Innovation & Research Programs: SIG is engaged in European R&D initiatives, staying ahead of new battery technologies, eco-design approaches, and recycling strategies.
+● Strategic Presence & Local Support: Unlike competitors that operate remotely, SIG maintains a strong local presence in Europe, enabling better customer support and faster project execution.
+Competitive Advantage: While some competitors import and distribute battery packs without adapting them to European market needs, SIG delivers customized, regulation-compliant, and regionally optimized energy storage solutions.
+4. Full In-House Engineering & Battery Testing Capabilities
+Unlike many competitors who only assemble batteries using third-party components, SIG Innotech possesses deep engineering expertise in hardware, software, and battery management systems (BMS).
+Key Strengths:
+● In-House Battery Design & Customization: SIG develops tailor-made battery packs optimized for specific applications.
+● Advanced Embedded Software & BMS Development: The company fine-tunes its battery management algorithms, ensuring longer lifespan, safety, and high efficiency.
+● Own Battery Testing Lab: SIG conducts comprehensive performance testing (capacity tests, cycling tests, thermal performance analysis) to validate battery safety and longevity.
+Competitive Advantage: Many battery suppliers rely on third-party testing, making them less flexible in quality assurance and customization. SIG’s in-house engineering & testing ensures complete control over battery quality and performance.
+5. Strong Focus on Eco-Design & Sustainability
+SIG Innotech is committed to sustainable battery solutions and eco-friendly practices.
+Key Strengths:
+● Design for Recycling: SIG optimizes battery designs for easy disassembly and material recovery, making its solutions more environmentally friendly than many competitors.
+● Use of Recycled Materials: The company incorporates recycled plastics and other eco-friendly components whenever possible.
+● Lifecycle Optimization: Through advanced battery monitoring and BMS algorithms, SIG extends battery lifespan and efficiency, reducing waste and improving ROI for customers.
+Competitive Advantage: While many competitors focus solely on cost reduction, SIG balances performance, sustainability, and long-term reliability.
+      Conclusion: Why Choose SIG ENERGY TECHNOLOGY?
+SIG Innotech stands out from the competition by offering a unique combination of long-term expertise, strict quality control, strong European industry connections, advanced engineering capabilities, and sustainable design principles.
+Key Differentiator
+SIG Innotech’s Advantage Over Competitors
+Proven Industry Experience
+Trusted partner with a decade of success in battery solutions.
+Strict Quality Control
+Global sourcing with rigorous in-house testing for reliability.
+Strong European Network
+Deep partnerships in clean energy, transportation, and industry.
+Engineering & Testing Expertise
+Full in-house development of custom battery packs, BMS, and software.
+Eco-Friendly & Sustainable
+Batteries optimized for recycling and long-term use.
+With its high-performance, safe, and sustainable battery solutions, SIG Innotech is a preferred partner for businesses seeking high-quality, customized, and future-ready energy storage technologies.
+
+Name, logo and charter 
+Nom, logo et charte
+
+What is the name of the company: SIG? SIG Innotech? SIG Energy Technology? 
+Quel est le nom de la société : SIG ? SIG Innotech ? SIG Energy Technology ? 
+
+We use SIG Energy Technology on website pages. The primary domain is www.sig-innotech.com, and www.sig-energytech.com should redirect to it.
+
+
+What elements of the charter (color, logo shape, fonts...) should be retained?
+Quels éléments de charte (couleur, forme du logo, typos…) doivent être conservés ?
+ 
+No need to change the actual logo (both static and animated version in this folder)
+The button color #9ac154 on the current website can be adjusted to better match the logo.
+
+The content of the site 
+Le contenu du site 
+What main message should visitors take away upon arriving at the site? 
+Quel message principal doit être retenu par les visiteurs dès l’arrivée sur le site ?
+At SIG ENERGY TECHNOLOGY, we are experts in both hardware and software, delivering high-quality battery solutions that are trusted by leading industry partners and customers. Our long-standing expertise in battery design, management systems (BMS), and energy storage solutions ensures that every product we develop meets the highest standards of performance, reliability, and safety.  
+We control every aspect of battery development—from selecting the best cells worldwide to designing custom battery packs and optimizing them with intelligent software. Our in-house testing and validation lab ensures that each battery meets strict quality and safety requirements before reaching our customers.
+Our proven track record in electric mobility, industrial machinery, marine, and energy storage demonstrates our commitment to excellence. With strong partnerships across Europe’s clean energy sector, we bring cutting-edge innovation while maintaining compliance with the most stringent industry regulations.
+At SIG, we don’t just provide batteries—we engineer performance, durability, and efficiency. Choosing us means securing the best solution for your business, backed by proven expertise, world-class quality, and long-term reliability.
+For the success of your project, trust SIG ENERGY TECHNOLOGY—where quality and expertise power your project.
+
+The objectives of the site: generate leads, demonstrate expertise, raise awareness among the target audience about regulatory issues? 
+Les objectifs du site : générer des leads, démontrer l’expertise, sensibiliser la cible aux enjeux du règlementaire ?
+
+
+● demonstrate expertise: Showcase expertise by sharing our industry reports and development images and videos.
+
+● generate leads: Potential customers may contact us for product design, material procurement, and data sharing.
+
+What emotion/sensation do you want visitors to feel (trust, excitement, serenity…)? 
+Quelle émotion/sensation souhaitez-vous que les visiteurs ressentent (confiance, excitation, sérénité…) ?
+
+We aim for a clean, simple, and professional design style that conveys clarity, reliability, and confidence. The website should feel informative and valuable to potential customers, providing high-density, useful content rather than vague or abstract slogans. 
+Every element should reinforce trust in our expertise, the quality of our solutions, and our proven track record—ensuring visitors see real value and practical benefits in choosing SIG ENERGY TECHNOLOGY.
+
+Is the structure and layout of the site defined? 
+La structure et le rubricage du site est-il défini ? 
+
+Here is site structure.
+
+Your graphic convictions 
+Vos convictions graphiques
+Are there any websites (not necessarily in your sector) that you like? 
+Il y a-t-il des sites (pas forcément sur votre secteur) que vous aimez ?
+https://dribbble.com/shots/19719808-IONIC-Landing-page-Oil-energy-Sunnyday https://dribbble.com/shots/24452271-SUERGY-Renewable-Energy-Landing-Page https://dribbble.com/shots/23445362-Energy-Park-highlights 
+
+Do you prefer warm colors (red, orange, yellow…) to cool colors (blue, gray…)?
+Préférez-vous les couleurs chaudes (rouge, orange, jaune…) aux couleurs froides (bleu, gris…) ? 
+
+
+Use a white background with black or gray as the main tone, keeping our logo as a rare warm visual point. We hope this aids in information delivery, reduces visual pressure on visitors, and makes the design more enduringly appealing.
+
+ 
+Do you prefer a dark mode (dark background, like https://www.performium.io/) or light mode (light background like https://www.afges.com)? 
+Préférez-vous un mode dark (fond sombre, comme https://www.performium.io/) ou mode light (fond clair comme https://www.afges.com ) ?
+
+
+We choose light mode as our reference design.
+
+Do you prefer "serif" or "sans serif" fonts?
+Préférez-vous les fontes « sérif » ou « sans sérif »
+
+
+
+sans serif
+
+
+Are there any images you would like to see associated with the website? (landscapes, technical or industrial visuals, human, abstract…) 
+Il y a-t-il des images que vous souhaiteriez voir associés au site web ? (paysages, visuels techniques ou industriels, humains, abstrait…)
+
+
+We prefer domain-specific images over general ones.
+
+Is there an element from your old site that you would like to keep? What would you prefer not to see anymore?
+Il y a-t-il un élément de votre ancien site que vous souhaitez conserver ? Que vous ne souhaitez plus voir ?
+
+
+I've stored our in-house images/videos in the cloud folder here (in folder Lab and Homepage).
+
+We may create similar images for the new website and would appreciate the designer sharing their style guidelines based on the website's design.
+
+We'll be drafting a document for each page's content, starting with English.

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Solution Design - SIG Energy Technology</title>
+    <meta name="description" content="SIG Energy Technology's end-to-end custom battery solution design process, from material selection to recycling solutions.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../asset/SIG ENERGY TECHNOLOGY - logo static.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    
+    <!-- Mermaid.js for Gantt Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    
+    <style>
+        /* Page-specific styles */
+        .solution-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 8rem 0 4rem;
+            margin-top: 80px;
+        }
+        
+        .workflow-container {
+            margin: 3rem auto;
+            max-width: 1200px;
+        }
+        
+        .gantt-chart-container {
+            margin: 3rem 0;
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+        }
+        
+        .stage-card {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+        }
+        
+        .stage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stage-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            margin-right: 1rem;
+            font-weight: 700;
+        }
+        
+        .stage-title {
+            display: inline-block;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .stage-description {
+            line-height: 1.6;
+            color: var(--dark-gray);
+        }
+        
+        .stage-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .stage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .workflow-intro {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .workflow-intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .workflow-intro p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .workflow-detailed {
+            margin-top: 4rem;
+        }
+        
+        .workflow-detailed h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--dark);
+        }
+        
+        .workflow-cta {
+            text-align: center;
+            margin: 4rem 0;
+            padding: 3rem;
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius);
+        }
+        
+        .workflow-cta h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .workflow-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--dark-gray);
+        }
+        
+        @media (max-width: 768px) {
+            .stage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Container - Will be populated by JavaScript -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="solution-hero">
+        <div class="container">
+            <h1>Custom Solution Design</h1>
+            <p>End-to-End Battery Solution Delivery</p>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section class="section">
+        <div class="container workflow-container">
+            <div class="workflow-intro fade-in">
+                <h2>Our End-to-End Delivery Process</h2>
+                <p>
+                    At SIG Energy Technology, we provide comprehensive battery solutions tailored to your specific needs.
+                    Our process encompasses the entire lifecycle from initial material selection to recycling solutions,
+                    ensuring sustainability and performance at every stage.
+                </p>
+            </div>
+            
+            <!-- Gantt Chart -->
+            <div class="gantt-chart-container fade-in">
+                <div class="mermaid">
+gantt
+    dateFormat  YYYY-MM-DD
+    title End-to-End Battery Solution Delivery
+    axisFormat %b %d
+    
+    section Project Initialization
+    Project Kickoff                     :done,    init1, 2025-01-01, 10d
+    Requirements Analysis               :active,  init2, after init1, 15d
+    
+    section Material Selection
+    Cell Chemistry Research             :         mat1, after init2, 14d
+    Performance Assessment              :         mat2, after mat1, 10d
+    Material Specification              :         mat3, after mat2, 7d
+    
+    section Module Design
+    Conceptual Design                   :         des1, after mat2, 14d
+    Thermal Management Design           :         des2, after des1, 10d
+    BMS Integration                     :         des3, after des2, 10d
+    Mechanical Design                   :         des4, after des3, 10d
+    Design Review                       :         des5, after des4, 7d
+    
+    section Prototype & Testing
+    Prototype Fabrication               :         prot1, after des5, 14d
+    Laboratory Testing                  :         prot2, after prot1, 10d
+    Environmental Testing               :         prot3, after prot2, 10d
+    Safety Certification                :         prot4, after prot3, 15d
+    Performance Validation              :         prot5, after prot4, 7d
+    
+    section Mass Production
+    Production Planning                 :         prod1, after prot5, 10d
+    Supply Chain Setup                  :         prod2, after prod1, 14d
+    Quality Control Implementation      :         prod3, after prod2, 7d
+    Production Ramp-up                  :         prod4, after prod3, 21d
+    
+    section Implementation
+    Installation Planning               :         impl1, after prod2, 10d
+    On-site Deployment                  :         impl2, after prod4, 14d
+    Operation Training                  :         impl3, after impl2, 10d
+    
+    section Sustainability Cycle
+    Performance Monitoring              :         sus1, after impl3, 30d
+    Maintenance Support                 :         sus2, after sus1, 14d
+    End-of-Life Recycling               :         sus3, after sus2, 21d
+                </div>
+            </div>
+            
+            <!-- Workflow Stages Overview -->
+            <div class="workflow-detailed fade-in">
+                <h3>Our Process Explained</h3>
+                
+                <div class="stage-grid">
+                    <div class="stage-card">
+                        <div class="stage-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <span class="stage-number">1</span>
+                        <h4 class="stage-title">Material Selection</h4>
+                        <p class="stage-description">
+                            We begin by selecting the optimal battery chemistry and materials based on your specific application requirements.
+                            Our experts analyze factors such as energy density, power requirements, cycle life, temperature range, and safety considerations
+                            to determine the most suitable cell technology for your needs.
+                        </p>
+                    </div>
+                    
+                    <div class="stage-card">
+                        <div class="stage-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <span class="stage-number">2</span>
+                        <h4 class="stage-title">Module Design</h4>
+                        <p class="stage-description">
+                            Our engineering team develops custom module designs that integrate the selected cells with advanced thermal management,
+                            battery management systems, and mechanical protection. Each design undergoes rigorous simulation and analysis to ensure
+                            optimal performance, safety, and longevity in your specific operating conditions.
+                        </p>
+                    </div>
+                    
+                    <div class="stage-card">
+                        <div class="stage-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <span class="stage-number">3</span>
+                        <h4 class="stage-title">Prototype Fabrication</h4>
+                        <p class="stage-description">
+                            Before full-scale production, we fabricate prototypes to validate our designs in real-world conditions.
+                            These prototypes undergo comprehensive testing for electrical performance, thermal behavior, mechanical integrity,
+                            and safety compliance. This testing phase helps identify any adjustments needed to optimize the final product.
+                        </p>
+                    </div>
+                    
+                    <div class="stage-card">
+                        <div class="stage-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <span class="stage-number">4</span>
+                        <h4 class="stage-title">Mass Production</h4>
+                        <p class="stage-description">
+                            Once designs are validated, we scale up to efficient, sustainable mass production. Our manufacturing
+                            processes are optimized to ensure consistent quality and performance across all battery modules.
+                            We implement rigorous quality control protocols at every stage of production, from cell screening to
+                            final assembly and testing.
+                        </p>
+                    </div>
+                    
+                    <div class="stage-card">
+                        <div class="stage-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <span class="stage-number">5</span>
+                        <h4 class="stage-title">Operation Training</h4>
+                        <p class="stage-description">
+                            We provide comprehensive training for your team on how to effectively operate, monitor, and maintain
+                            the battery system. This includes instruction on battery management system interfaces, performance monitoring,
+                            preventive maintenance procedures, and troubleshooting techniques to ensure optimal system performance
+                            throughout its operational life.
+                        </p>
+                    </div>
+                    
+                    <div class="stage-card">
+                        <div class="stage-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <span class="stage-number">6</span>
+                        <h4 class="stage-title">Recycling Solution</h4>
+                        <p class="stage-description">
+                            Our commitment to sustainability extends to end-of-life planning. We design with circularity in mind,
+                            providing clear pathways for battery recycling and material recovery. Our dedicated sustainability
+                            team works with clients to develop recycling strategies that maximize material recovery and minimize
+                            environmental impact when batteries eventually reach the end of their useful life.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="workflow-cta fade-in">
+                <h3>Ready to Design Your Custom Battery Solution?</h3>
+               
+                <a href="../contact/index.html" class="btn">Contact Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Container - Will be populated by JavaScript -->
+    <div id="footer-container"></div>
+
+    <!-- JavaScript -->
+    <script src="../../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Mermaid
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'neutral',
+                gantt: {
+                    titleTopMargin: 25,
+                    barHeight: 20,
+                    barGap: 4,
+                    topPadding: 50,
+                    leftPadding: 75,
+                    gridLineStartPadding: 35,
+                    fontSize: 12,
+                    fontFamily: '"Roboto", sans-serif',
+                    numberSectionStyles: 4,
+                    axisFormat: '%b %d',
+                    todayMarker: 'rgba(0, 102, 204, 0.5)'
+                }
+            });
+        });
+    </script>
+</body>
+</html>
